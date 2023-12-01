@@ -6,11 +6,11 @@ const hasMoreThanOneNeedle = (input: string[]): boolean =>
 const findNeedle = (input: string[]): string => {
   let message;
   if (hasNoNeedle(input)) message = 'no needle found';
-
-  if (hasMoreThanOneNeedle(input)) message = 'error';
-
-  const position = input.indexOf('needle');
-  message = `found the needle at position ${position}`;
+  else if (hasMoreThanOneNeedle(input)) message = 'error';
+  else {
+    const position = input.indexOf('needle');
+    message = `found the needle at position ${position}`;
+  }
 
   return message;
 };
