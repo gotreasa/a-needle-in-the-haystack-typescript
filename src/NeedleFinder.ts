@@ -1,10 +1,11 @@
 const findNeedle = (input: string[]): string => {
-  if (JSON.stringify(input) === JSON.stringify(['needle']))
-    return 'found the needle at position 0';
-  if (JSON.stringify(input) === JSON.stringify(['sausage', 'needle']))
-    return 'found the needle at position 1';
+  if (!input.includes('needle')) return 'no needle found';
 
-  return 'no needle found';
+  if (input.indexOf('needle') !== input.lastIndexOf('needle')) return 'error';
+
+  const position = input.indexOf('needle');
+
+  return `found the needle at position ${position}`;
 };
 
 export default findNeedle;
