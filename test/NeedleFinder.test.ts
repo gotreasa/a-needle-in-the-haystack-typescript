@@ -1,8 +1,7 @@
-import Dummy from '../src/NeedleFinder';
+import findNeedle from '../src/NeedleFinder';
 
-describe('Check the Dummy class is working', () => {
-  test('should have a class object valid set to true', () => {
-    const dummy = new Dummy();
-    expect(dummy.valid).toBe(true);
+describe('The Needle Finder', () => {
+  test('should say no needle found for input []', () => {
+    expect(findNeedle([])).toBe('no needle found');
   });
 });

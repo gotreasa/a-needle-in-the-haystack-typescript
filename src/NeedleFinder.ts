@@ -1,6 +1,3 @@
-export default class Dummy {
-  valid: boolean;
-  constructor() {
-    this.valid = true;
-  }
-}
+const findNeedle = (input: string[]): string => 'no needle found';
+
+export default findNeedle;
