@@ -1,5 +1,9 @@
+const hasNoNeedle = (input: string[]): boolean => {
+  return !input.includes('needle');
+};
+
 const findNeedle = (input: string[]): string => {
-  if (!input.includes('needle')) return 'no needle found';
+  if (hasNoNeedle(input)) return 'no needle found';
 
   if (input.indexOf('needle') !== input.lastIndexOf('needle')) return 'error';
 
