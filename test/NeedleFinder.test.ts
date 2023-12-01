@@ -8,4 +8,10 @@ describe('The Needle Finder', () => {
   test('should say found the needle at position 0 for input ["needle"]', () => {
     expect(findNeedle(['needle'])).toBe('found the needle at position 0');
   });
+
+  test('should say found the needle at position 1 for input ["sausage", "needle"]', () => {
+    expect(findNeedle(['sausage', 'needle'])).toBe(
+      'found the needle at position 1',
+    );
+  });
 });
