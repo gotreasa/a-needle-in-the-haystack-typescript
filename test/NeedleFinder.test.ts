@@ -32,4 +32,8 @@ describe('The Needle Finder', () => {
   test("should return 'error' when the input is ['needle', 'needle']", () => {
     expect(findNeedle(['needle', 'needle'])).toBe('error');
   });
+
+  test('should say found the needle at position 1 for input [4, "needle"]', () => {
+    expect(findNeedle([4, 'needle'])).toBe('found the needle at position 1');
+  });
 });

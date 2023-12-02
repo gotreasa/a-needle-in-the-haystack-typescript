@@ -12,4 +12,5 @@
 - ✅ should return 'found the needle at position 0' for input ['needle']
 - ✅ should return 'found the needle at position 1' for input ['sausage', 'needle']
 - ✅ should return "found the needle at position 5" for input ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]
-- 🚧 should return 'error' when the input is ['needle', 'needle']
+- ✅ should return 'error' when the input is ['needle', 'needle']
+- ✅ should return 'found the needle at position 1' for input [4, 'needle']
