@@ -1,14 +1,16 @@
-const hasNoNeedle = (input: string[]): boolean => !input.includes('needle');
+const hasNoNeedle = (haystack: string[]): boolean =>
+  !haystack.includes('needle');
 
-const hasMoreThanOneNeedle = (input: string[]): boolean =>
-  input.indexOf('needle') !== input.lastIndexOf('needle');
+const hasMoreThanOneNeedle = (haystack: string[]): boolean =>
+  haystack.indexOf('needle') !== haystack.lastIndexOf('needle');
 
-const findNeedle = (input: any[]): string => {
+const findNeedle = (haystack: any[]): string => {
   let message;
-  if (hasNoNeedle(input)) message = 'no needle found';
-  else if (hasMoreThanOneNeedle(input)) message = 'error';
+  if (hasNoNeedle(haystack)) message = 'no needle found';
+  else if (hasMoreThanOneNeedle(haystack))
+    message = 'error - there is more than one needle in this haystack';
   else {
-    const position = input.indexOf('needle');
+    const position = haystack.indexOf('needle');
     message = `found the needle at position ${position}`;
   }
 

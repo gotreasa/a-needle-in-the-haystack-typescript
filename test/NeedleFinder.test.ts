@@ -29,8 +29,10 @@ describe('The Needle Finder', () => {
     ).toBe('found the needle at position 5');
   });
 
-  test("should return 'error' when the input is ['needle', 'needle']", () => {
-    expect(findNeedle(['needle', 'needle'])).toBe('error');
+  test("should return 'error - there is more than one needle in this haystack' when the input is ['needle', 'needle']", () => {
+    expect(findNeedle(['needle', 'needle'])).toBe(
+      'error - there is more than one needle in this haystack',
+    );
   });
 
   test('should say found the needle at position 1 for input [4, "needle"]', () => {
